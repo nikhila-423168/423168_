@@ -1,0 +1,54 @@
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ cd 423168
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ grep "error" log.txt
+error
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ grep -o "success" data_.txt | wc -l
+2
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ grep "^[0-9]" records.txt
+1).length===1,a.aft_counter.length===0&&b&&c)))a.onaft(c)},!0);a.prt=-1;a.wiz_tick=function(){var b=n("prt");a.prt=b}};}).call(this);
+102 75
+103 60
+104 90
+105 78
+102,Alice Smith,Developer,60000
+103,Bob Brown,Designer,55000
+104,Charlie Johnson,Analyst,52000
+105,David White,Developer,62000
+106,Eve Black,Manager,70000
+192.168.1.11 - - [10/Feb/2024:10:16:05] "POST /login.php HTTP/1.1" 403
+192.168.1.12 - - [10/Feb/2024:10:17:45] "GET /about.html HTTP/1.1" 200
+192.168.1.13 - - [10/Feb/2024:10:19:21] "GET /contact.html HTTP/1.1" 404
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ grep -oE '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' contacts.txt
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+c_classroom4211bebf@group.calendar.google.com
+423168@student.nitandhra.ac.in
+c_classroom4211bebf@group.calendar.google.com
+c_classroom4211bebf@group.calendar.google.com
+423168@student.nitandhra.ac.in
+423168@student.nitandhra.ac.in
+john.doe@gmail.com
+alice.smith@yahoo.com
+bob.brown@outlook.com
+charlie.johnson@gmail.com
+david.white@hotmail.com
+eve.black@company.com
+frank.green@university.edu
+atpinstructor3@nitandhra.ac.in
+atpinstructor3@nitandhra.ac.in
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ grep -io "apple" fruits.txt
+apple
+apple
+apple
+apple
+apple
+apple
+apple
+apple
+apple
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ 
+
+

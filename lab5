@@ -1,0 +1,16 @@
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ awk 'BEGIN { FS = "\t" } NR == 1 { for (i = 2; i <= NF; i++) { subjects[i] = $i; counts[i] = 0; sums[i] = 0 } next } { for (i = 2; i <= NF; i++) { sums[i] += $i; counts[i]++ } } END { for (i = 2; i <= NF; i++) { avg = sums[i] / counts[i]; printf "Average of %s: %.2f\n", subjects[i], avg } }' scores.csv
+Average of math: 78.33
+Average of science: 85.67
+Average of english: 91.00
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ awk '{ ips[$1]++; } END { for (ip in ips) { print ip, ips[ip]; } }' server_.log
+192.168.1.2 1
+192.168.1.1 2
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ sed -E 's/^(\S+)(.*)(\s+)(\S+)$/\4\2\3\1/' text_lines.txt
+cherry banana apple
+elephant cat dog
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ sed -E 's/\b(\w+)\s+\1\b/\1/g' duplicate_words.txt
+hello worldthis is a test
+(base) student@ai-HP-ProDesk-600-G4-MT:~/423168$ sed -E 's/^[A-Za-z0-9._%+-]+@/\*\*\*\*\*\*\*\*\*\*\*\*\@/' email_.txt
+************@example.com
+************@gmail.com
+

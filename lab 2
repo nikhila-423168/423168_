@@ -1,0 +1,23 @@
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ ls -p | grep '^a'
+alias
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ ls *.txt
+2025-01-28_16-52.txt  myfile2.txt
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ ls -p | grep '^.....$'
+alias
+file/
+hello
+name/
+snap/
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ ls -p | grep '^[b-e]'
+cowsay_3.03+dfsg2-4_all.deb
+cowsay_3.03+dfsg2-4_all.deb.1
+data1/
+dataA/
+directory_name/
+eclipse/
+eclipse-workspace/
+example-app-1.0-1.x86_64.rpm
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ ls -p | grep '^.[0-9].*\.log$'
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ 
+
+

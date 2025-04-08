@@ -1,0 +1,26 @@
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ mkdir hello_git
+(base) student@ai-HP-ProDesk-600-G4-MT:~$ cd hello_git
+(base) student@ai-HP-ProDesk-600-G4-MT:~/hello_git$ nano hello_.java
+(base) student@ai-HP-ProDesk-600-G4-MT:~/hello_git$ nano README.md
+(base) student@ai-HP-ProDesk-600-G4-MT:~/hello_git$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/student/hello_git/.git/
+(base) student@ai-HP-ProDesk-600-G4-MT:~/hello_git$ ls -al
+total 20
+drwxrwxr-x  3 student student 4096 Apr  8 13:02 .
+drwxr-xr-x 66 student student 4096 Apr  8 13:00 ..
+drwxrwxr-x  7 student student 4096 Apr  8 13:02 .git
+-rw-rw-r--  1 student student  124 Apr  8 13:00 hello_.java
+-rw-rw-r--  1 student student   66 Apr  8 13:01 README.md
+(base) student@ai-HP-ProDesk-600-G4-MT:~/hello_git$ 
+
+

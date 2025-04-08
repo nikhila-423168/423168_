@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+void insert_node(Node** head, int value) {
+    Node* new_node = (Node*)malloc(sizeof(Node));
+    new_node->data = value;
+    new_node->next = *head;
+    *head = new_node;
+}
+
+void delete_node(Node** head, int value_to_delete) {
+    Node* current = *head;
+    Node* prev = NULL;
+    while (current != NULL && current->data != value_to_delete) {
+        prev = current;
+        current = current->next;
+    }
+    if (current == NULL) return;
+    if (prev == NULL) {
+        *head = current->next;
+    } else {
+        prev->next = current->next;
+    }
+    free(current);
+}
+
+void print_list(Node* head) {
+    Node* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    Node* head = NULL;
+    insert_node(&head, 10);
+    insert_node(&head, 20);
+    insert_node(&head, 30);
+    printf("Original list: ");
+    print_list(head);
+    delete_node(&head, 30);
+    printf("List after deleting 30: ");
+    print_list(head);
+    Node* temp = head;
+    head = head->next;
+    free(temp);
+    printf("Trying to access freed memory: %d\n", temp->data);
+    Node* current = head;
+    while (current != NULL) {
+        Node* next = current->next;
+        free(current);
+        current = next;
+    }
+    return 0;
+}
+
+commands:
+
+gcc -g broken_list.c -o broken_list
+./broken_list
+gdb broken_list core
+(gdb) bt
+(gdb) frame 0  # Or the frame number where the crash occurred
+(gdb) p temp
+(gdb) x/xw temp
+(gdb) frame 1  # Go up one frame (to main)
+(gdb) p head
+(gdb) p head->next
+
